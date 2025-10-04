@@ -8,7 +8,7 @@
   <style>
     :root{
       --bg:#0b0c0f; --panel:#111317; --muted:#8892a6; --text:#e7ecf3; --brand:#4ea1ff;
-      --accent:#34d399; --warning:#f59e0b; --danger:#ef4444; --link:#ffff00; --border:#202530;
+      --accent:#34d399; --warning:#f59e0b; --danger:#ef4444; --link:#ffffff; --border:#202530;
       --shadow:0 8px 24px rgba(0,0,0,.35);
     }
     @media (prefers-color-scheme: light){
@@ -19,7 +19,7 @@
     header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px); background:color-mix(in oklab, var(--panel) 92%, transparent); border-bottom:1px solid var(--border)}
     .wrap{max-width:980px; margin:0 auto; padding:20px}
     .title{display:flex; align-items:center; gap:12px}
-    .title h1{font-size:clamp(1.25rem, 2.5vw, 1.75rem); margin:0; text-align: center;}
+    .title h1 {width: fit-content; margin: 0 auto; font-size: clamp(1.25rem, 2.5vw, 1.75rem);}
     .badge{font-size:.8rem; color:#fff; background:linear-gradient(135deg,var(--brand),var(--accent)); padding:.25rem .5rem; border-radius:999px}
     .grid{display:grid; grid-template-columns: 260px 1fr; gap:24px}
     nav{position:sticky; top:70px; align-self:start}
@@ -254,6 +254,7 @@
   </script>
 </body>
 </html>
+
 
 
 
