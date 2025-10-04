@@ -1,326 +1,259 @@
-export default function OverseasStudentGuide() {
-  const sections = [
-    {
-      id: "law",
-      title: "一、僑生回國就學及輔導辦法（重點整理）",
-      updated: "民國112年10月5日修正",
-      items: [
-        {
-          k: "僑生定義與年限",
-          v: [
-            "海外出生且連續居留至今，或最近連續居留海外滿6年並取得僑居地永久／長期居留證件者。",
-            "申請大學醫學、牙醫、中醫學系者，須連續居留海外滿8年。",
-            "連續居留：每曆年入境臺灣停留不逾120日（部分情形不計入，如交換、實習、戰亂/疫情等）。",
-          ],
-        },
-        {
-          k: "海外範圍",
-          v: [
-            "不含大陸地區、香港、澳門。",
-          ],
-        },
-        {
-          k: "申請與文件（各級適用）",
-          v: [
-            "入學申請表、學歷與成績證明（必要時檢附認證或譯本）",
-            "僑居地永久／長期居留證件",
-            "志願序（向單獨招生之大學申請者免附）",
-            "未成年就讀國中小／高中職／專科者需在臺監護人同意書與資格文件",
-          ],
-        },
-        {
-          k: "流程與分發",
-          v: [
-            "駐外機構或指定單位受理→僑委會審查身分→（依學制）教育部或海外聯招會核定分發。",
-            "大學可由學校審查或甄試後發給入學許可；聯招會據志願、成績與名額分發。",
-          ],
-        },
-        {
-          k: "自行回國入學",
-          v: [
-            "符合資格者，回國次日起90日內檢具證件向僑委會申請核轉分發（公立高中普通科以華僑高中為限）。",
-            "逾學期1/3者可隨班附讀一年；技術/普通型高中群科與五專則分發於下一學年度入學。",
-          ],
-        },
-        {
-          k: "升學優待（外加名額）",
-          v: [
-            "國中以上僑生於畢業當年參加下一學程，可享加分或外加名額（約占各校核定名額外加2%，細節依學制而異）。",
-            "優待以一次為限，僅適用於畢業當年。",
-          ],
-        },
-        {
-          k: "名額與轉學",
-          v: [
-            "原則：前一學年度核定招生名額外加10%（大學/專二需提增量計畫始得超過）。",
-            "專班或專案核定者不受10%限制。",
-            "改分發以一次為限（大學→臺師大僑生先修部；高中/五專→華僑高中）。",
-          ],
-        },
-        {
-          k: "就學費用與住宿",
-          v: [
-            "國中小與高中職依本國學生收費基準；符合免學費規定者依法辦理。",
-            "專科五專後二年與大學依學校規定收費。",
-            "住宿以學生宿舍為原則；不足時由學校與在臺監護人協助。",
-          ],
-        },
-        {
-          k: "輔導與獎助",
-          v: [
-            "各校應辦新生講習、課業輔導、轉系（科）與寒暑期輔導。",
-            "清寒助學金與優秀獎學金由教育部主辦；醫療保險、工讀／學習扶助、在學優良獎學金由僑委會主辦。",
-          ],
-        },
-        {
-          k: "身分中止與恢復",
-          v: [
-            "畢業、退學或休學期滿未續讀者中止僑生身分；大學畢業經核准實習最長可延至畢業後一年。",
-            "復學、轉學或升學後可恢復僑生身分。",
-          ],
-        },
-      ],
-    },
-    {
-      id: "pathways",
-      title: "二、僑生資格申請與僑生考試（升大學）須知",
-      items: [
-        {
-          k: "資格要點",
-          v: [
-            "海外連續居留滿6年（醫/牙/中醫8年）且具僑居地長期/永久居留。",
-            "連續6~8年間，每年返臺停留合計不超過120日。",
-          ],
-        },
-        {
-          k: "升學管道（多元並行，可增加機會）",
-          v: [
-            "推薦入學（7–8月公告，9月校內審，10月繳件）",
-            "各校獨招（9–12月依各校時程；簡章見海外聯招會平台的『各校單獨招生』專區）",
-            "海外聯招會：個人申請（11–12月報名；1月上傳審查資料；最多選填4個志願）",
-            "海外聯招會：聯合分發（僑考；2月報名，4月應試；最多選填70個志願）",
-          ],
-        },
-        {
-          k: "僑考測驗科目（類組）",
-          v: [
-            "第一類組：國文、英文、數學、中外歷史、中外地理",
-            "第二類組：國文、英文、數學、物理、化學",
-            "第三類組：國文、英文、數學、生物、化學",
-            "第二、三類跨填志願者須加考物理或生物",
-          ],
-        },
-        {
-          k: "僑考時間與地點（通常做法）",
-          v: [
-            "時間：通常於4月中舉行",
-            "地點：胡志明市臺灣學校教室（監考官自臺灣帶卷，與本校教師共同監考）",
-          ],
-        },
-        {
-          k: "放榜與報到",
-          v: [
-            "個人申請：3月底放榜；未錄取者，系統自動轉入聯合分發",
-            "聯合分發：6月中上旬放榜；海外聯招會寄發『分發入學通知書』至駐胡志明市辦事處再轉交考生；持通知書至校辦理註冊報到",
-          ],
-        },
-        {
-          k: "僑居加簽（升學前可先辦）",
-          v: [
-            "取得越南有效永久居留或連續四年持一年一次以上效期居留證即可視同永久居留（換證時影印舊證備存）",
-            "接近役齡與役男期間每年入境臺灣停留不得超過183天",
-            "護照僑居加簽可移簽至新護照，建議先行完成以利升學與報到",
-          ],
-        },
-        {
-          k: "國中升學（申請高中／職／五專）",
-          v: [
-            "資格與文件與升大學僑生相同，約每年3月10日前截止；不需另考，依招生學校是否參與僑生招生而定；放榜確定返臺後至指定醫院體檢",
-          ],
-        },
-        {
-          k: "提醒",
-          v: [
-            "僑生資格優待僅能使用一次，通常於高中畢業升大學最為有利",
-            "若現行法規修正，以最新公告為準",
-          ],
-        },
-      ],
-    },
-    {
-      id: "qa",
-      title: "三、『僑生認定』與『僑居身分』常見問答",
-      items: [
-        {
-          q: "僑生身分如何認定？",
-          a: "符合海外連續居留年限（6年；醫/牙/中醫8年）並持僑居地長期/永久居留證件，且由僑委會審認。",
-        },
-        {
-          q: "尚未服兵役男子辦理僑居加簽限制？",
-          a: "年滿16歲之年1/1起至18歲之年12/31（接近役齡）每年返國累計不超過183天，且先撤銷護照兵役限制戳記；19歲後首次返國時須已具備加簽資格。",
-        },
-        {
-          q: "僑居加簽用途與效期？",
-          a: "作為返國行使各項權利義務之依據；加簽在護照有效期間內有效。",
-        },
-        {
-          q: "在國外居住4年如何認定？",
-          a: "在臺灣、大陸、港澳以外地區累計居住滿1460日（入出國當日均計入），可檢附移民署入出國日期證明書證明。",
-        },
-        {
-          q: "文件語言與驗證注意？",
-          a: "英文外之外文須附中文譯本；於國外製作之文件須經駐外館處驗證，港澳/大陸另依規定辦理；國內譯本須公證。",
-        },
-        {
-          q: "加簽可否移簽或註銷？",
-          a: "可移簽至新護照（同一僑居證明仍有效者）；亦可向領事事務局或駐外館處申請註銷。",
-        },
-      ],
-    },
-    {
-      id: "hcmc",
-      title: "四、駐胡志明市臺北經濟文化辦事處：護照『僑居加/移簽』規定（113.04.18更新）",
-      items: [
-        {
-          k: "申請條件（擇要）",
-          v: [
-            "持有效中華民國普通護照",
-            "取得越南有效永久居留（或連續四年持一年一次或一年以上效期之暫居證，視同永久居留）",
-            "在國外累計居住滿4年（1460日），並具有在越南連續居住滿6個月或最近兩年每年累計滿8個月之證明",
-          ],
-        },
-        {
-          k: "應備文件（重點）",
-          v: [
-            "申請書（113-6版）與有效護照",
-            "三個月內『入出國日期證明書』（若兼持越南護照，須檢附越南護照入出境紀錄）",
-            "越南永久居留或四年不中斷一年一次/一年以上效期暫居證明（越南5年免簽不適用）",
-            "戶籍謄本、必要時越南出生證明及驗證文件",
-            "規費：免收",
-          ],
-        },
-        {
-          k: "役齡規範",
-          v: [
-            "接近役齡與役男每年在臺停留累計未超過183天；若護照有兵役限制戳記，須經內政部同意後辦理",
-          ],
-        },
-        {
-          k: "移簽情形",
-          v: [
-            "新護照＋舊護照（已加簽）+僑居國有效證件（或居留證件）即可依規移簽",
-          ],
-        },
-      ],
-    },
-    {
-      id: "links",
-      title: "五、重點連結",
-      links: [
-        { name: "海外聯合招生委員會（繁）", url: "https://cmn-hant.overseas.ncnu.edu.tw/" },
-        { name: "駐胡志明市臺北經濟文化辦事處", url: "https://www.roc-taiwan.org/vnsgn/index.html" },
-        { name: "中華民國僑務委員會（僑生服務/FAQ）", url: "https://www.ocac.gov.tw/OCAC/" },
-      ],
-    },
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 text-slate-900">
-      <header className="sticky top-0 z-30 backdrop-blur bg-white/70 border-b">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <h1 className="text-lg sm:text-xl font-semibold">胡志明市臺灣學校｜僑生返臺升學手冊（網頁版）</h1>
-          <a
-            href="/mnt/data/114-1僑生返臺升學說明會資料(手冊)20250926.pdf"
-            className="text-sm underline decoration-dotted hover:opacity-80"
-          >下載原始PDF</a>
-        </div>
-      </header>
-
-      <main className="max-w-6xl mx-auto px-4 py-8">
-        <section className="mb-8">
-          <div className="grid md:grid-cols-3 gap-6 items-stretch">
-            <div className="md:col-span-2 p-6 rounded-2xl shadow-sm bg-white border">
-              <h2 className="text-2xl font-bold mb-2">僑生升學資訊總覽</h2>
-              <p className="text-sm text-slate-600 mb-4">編修日期：114年9月25日｜資料彙整歷屆校友經驗，若法規修正以最新公告為準</p>
-              <ul className="space-y-2 text-sm leading-6 list-disc list-inside">
-                <li>快速瀏覽法規重點、升學管道、考科與時程、僑居加簽規範與常見Q&A。</li>
-                <li>支援行動裝置閱讀，點擊右側目錄可快速跳轉。</li>
-              </ul>
-            </div>
-            <nav className="p-6 rounded-2xl shadow-sm bg-white border">
-              <h3 className="font-semibold mb-3">目錄</h3>
-              <ol className="space-y-2 text-sm">
-                {sections.map((s, i) => (
-                  <li key={s.id}>
-                    <a href={`#${s.id}`} className="hover:underline">
-                      {i + 1}. {s.title.replace(/^\d+、/, "")}
-                    </a>
-                  </li>
-                ))}
-              </ol>
-            </nav>
-          </div>
-        </section>
-
-        {sections.map((s) => (
-          <section key={s.id} id={s.id} className="scroll-mt-24 mb-10">
-            <div className="mb-4 flex items-baseline justify-between">
-              <h2 className="text-xl font-bold">{s.title}</h2>
-              {"updated" in s && s.updated ? (
-                <span className="text-xs text-slate-500">{s.updated}</span>
-              ) : null}
-            </div>
-
-            {"items" in s && s.items ? (
-              <div className="space-y-4">
-                {s.items.map((it, idx) => (
-                  <div key={idx} className="bg-white border rounded-xl p-5 shadow-sm">
-                    {it.k ? (
-                      <h3 className="font-semibold mb-2">{it.k}</h3>
-                    ) : null}
-                    {it.v ? (
-                      <ul className="list-disc list-inside text-sm leading-7">
-                        {it.v.map((li: string, j: number) => (
-                          <li key={j}>{li}</li>
-                        ))}
-                      </ul>
-                    ) : null}
-                    {it.q ? (
-                      <details className="group">
-                        <summary className="cursor-pointer font-medium">Q：{it.q}</summary>
-                        <p className="mt-2 text-sm leading-7">A：{it.a}</p>
-                      </details>
-                    ) : null}
-                  </div>
-                ))}
-              </div>
-            ) : null}
-
-            {"links" in s && s.links ? (
-              <ul className="grid sm:grid-cols-2 gap-3">
-                {s.links.map((lnk, idx) => (
-                  <li key={idx} className="bg-white border rounded-xl p-5 shadow-sm">
-                    <a href={lnk.url} target="_blank" rel="noreferrer" className="font-medium underline decoration-dotted">
-                      {lnk.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
-          </section>
-        ))}
-
-        <section className="mt-12 p-6 bg-emerald-50 border border-emerald-200 rounded-2xl">
-          <h3 className="font-semibold mb-2">提醒</h3>
-          <p className="text-sm leading-7">
-            本頁係依手冊內容製作之網頁化摘要與導覽，實際作業仍請以教育部、僑委會、海外聯招會及駐處最新公告為準。
-          </p>
-        </section>
-      </main>
-
-      <footer className="max-w-6xl mx-auto px-4 py-10 text-xs text-slate-500">
-        <p>資料來源：胡志明市臺灣學校《僑生返臺升學說明會資料（手冊）》、教育部法規、僑務委員會、海外聯合招生委員會與駐胡志明市臺北經濟文化辦事處公開資訊。</p>
-      </footer>
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>114-1 僑生返臺升學說明會資料（HTML重製版）</title>
+  <meta name="description" content="胡志明市臺灣學校｜僑生返臺升學說明會資料（114-1）— 條文重點、流程與Q&A｜附快速導覽與返回按鈕" />
+  <style>
+    :root{
+      --bg:#0b0c0f; --panel:#111317; --muted:#8892a6; --text:#e7ecf3; --brand:#4ea1ff;
+      --accent:#34d399; --warning:#f59e0b; --danger:#ef4444; --link:#93c5fd; --border:#202530;
+      --shadow:0 8px 24px rgba(0,0,0,.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7fafc; --panel:#ffffff; --muted:#475569; --text:#0f172a; --brand:#2563eb; --link:#1d4ed8; --border:#e2e8f0; }
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0; font:16px/1.7 system-ui, -apple-system, "Noto Sans TC", Segoe UI, Roboto, Helvetica, Arial, "PingFang TC", "Microsoft JhengHei", "Heiti TC", sans-serif; background:var(--bg); color:var(--text)}
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px); background:color-mix(in oklab, var(--panel) 92%, transparent); border-bottom:1px solid var(--border)}
+    .wrap{max-width:980px; margin:0 auto; padding:20px}
+    .title{display:flex; align-items:center; gap:12px}
+    .title h1{font-size:clamp(1.25rem, 2.5vw, 1.75rem); margin:0}
+    .badge{font-size:.8rem; color:#fff; background:linear-gradient(135deg,var(--brand),var(--accent)); padding:.25rem .5rem; border-radius:999px}
+    .grid{display:grid; grid-template-columns: 260px 1fr; gap:24px}
+    nav{position:sticky; top:70px; align-self:start}
+    nav .toc{background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
+    nav h2{font-size:1rem; margin:.25rem 0 8px}
+    nav ol{margin:0; padding-left:1.1rem}
+    nav li{margin:.35rem 0}
+    nav a{color:var(--link); text-decoration:none}
+    nav a:hover{text-decoration:underline}
+    main{min-width:0}
+    section{background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:20px; margin-bottom:24px; box-shadow:var(--shadow)}
+    section h2{margin-top:0; font-size:1.25rem}
+    h3{margin-top:1.25rem}
+    .meta{color:var(--muted); font-size:.9rem}
+    .kb{display:grid; gap:8px}
+    .kb li{margin-left:1.2rem}
+    .callout{border-left:4px solid var(--accent); background:color-mix(in oklab, var(--accent) 5%, var(--panel)); padding:.75rem 1rem; border-radius:8px; margin:.75rem 0}
+    .warn{border-left-color:var(--warning); background:color-mix(in oklab, var(--warning) 7%, var(--panel))}
+    .links a{display:inline-block; margin:.25rem .5rem .25rem 0}
+    .toolbar{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
+    .btn{appearance:none; border:1px solid var(--border); background:color-mix(in oklab, var(--panel) 85%, black); color:var(--text); padding:.5rem .75rem; border-radius:10px; cursor:pointer; font-size:.9rem}
+    .btn:hover{border-color:color-mix(in oklab, var(--border), var(--brand)); box-shadow:0 0 0 3px color-mix(in oklab, var(--brand) 25%, transparent)}
+    .btn.micro{font-size:.8rem; padding:.35rem .55rem}
+    .float-top{position:fixed; right:18px; bottom:18px; z-index:100; border-radius:999px; padding:.6rem .75rem; box-shadow:var(--shadow)}
+    footer{color:var(--muted); text-align:center; padding:40px 0}
+    code{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background:color-mix(in oklab, var(--brand) 8%, var(--panel)); padding:.1rem .35rem; border-radius:6px}
+    @media (max-width: 960px){ .grid{grid-template-columns:1fr} nav{position:relative; top:0} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap title">
+      <span class="badge">HTML 重製版</span>
+      <h1>胡志明市臺灣學校｜僑生返臺升學說明會資料（114-1）</h1>
     </div>
-  );
-}
+  </header>
+
+  <div class="wrap grid">
+    <nav aria-label="頁面目錄">
+      <div class="toc">
+        <h2>目錄</h2>
+        <ol>
+          <li><a href="#sec1">一、僑生回國就學及輔導辦法｜重點條文</a></li>
+          <li><a href="#sec2">二、僑生資格申請與僑生考試（升大學）須知</a></li>
+          <li><a href="#sec3">三、『僑生認定』與『僑居身分』Q&A</a></li>
+          <li><a href="#sec4">四、駐胡志明市臺北經濟文化辦事處：護照僑居加（移）簽規定</a></li>
+          <li><a href="#sec5">五、僑委會補充宣導資料</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <main>
+      <section id="sec0">
+        <h2>文件資訊</h2>
+        <p class="meta">
+          編修日期：<strong>民國 114 年 9 月 25 日</strong>（西元 2025-09-25）。<br>
+          說明：本頁依原PDF手冊內容重整與提要，法規若修正，<em>仍以最新公告為準</em>。
+        </p>
+        <div class="callout warn"><strong>重要：</strong>欲申請醫學、牙醫、中醫學系者，最近連續居留海外年限須 <strong>8 年以上</strong>；其餘大多數系所為 <strong>6 年以上</strong>（每曆年在臺不得逾 120 日）。</div>
+      </section>
+
+      <section id="sec1">
+        <h2>一、僑生回國就學及輔導辦法｜重點條文</h2>
+        <p class="meta">依教育部法規與法務部全國法規資料庫彙整之條文要點（112-10-05 修正後版本）。</p>
+        <h3>定義與認定（第1–4條）</h3>
+        <ul class="kb">
+          <li>僑生：在海外出生連續居留迄今，或最近連續居留海外滿 <strong>6 年</strong>（醫牙中醫：<strong>8 年</strong>），並持僑居地永久/長期居留證件。</li>
+          <li>海外定義：不含大陸地區、香港、澳門。</li>
+          <li>「連續居留」：每曆年在臺停留不逾 <strong>120 日</strong>；符合特定情形（交換、實習、兵役等）者可不併入。</li>
+          <li>採計基準：以各管道簡章規定之申請截止日或 8/31 前完成年限；必要時填具切結書並由機關複審。</li>
+        </ul>
+        <h3>招生對象與限制（第5–6-1條）</h3>
+        <ul class="kb">
+          <li>得申請各級學校與經核定之學位專班（夜間/在職等特定班別除外）。</li>
+          <li>應備文件：入學申請表、學歷與成績證明（含驗證/譯本要求）、僑居地居留證件、志願序、其他校定文件。</li>
+          <li>國中小/高中職/專科另須監護人同意書（符合條件者免）。</li>
+        </ul>
+        <h3>受理與分發（第7–9條）</h3>
+        <ul class="kb">
+          <li>駐外機構/保薦單位收件後送僑務主管機關審查；海外聯招或教育主管機關辦理分發。</li>
+          <li>逾學期三分之一返臺者，得附讀一年；次年正式分發入學。</li>
+        </ul>
+        <h3>升學優待與名額（第10–12條）</h3>
+        <ul class="kb">
+          <li>畢業當年參加下一學程，<strong>加分優待 25%</strong>（不同入學方式計算略有差異）；名額採 <strong>外加2%</strong> 原則。</li>
+          <li>各級學校得以前一學年度招生名額外加 <strong>10%</strong> 招收僑生（大學超過需提增量計畫）。</li>
+        </ul>
+        <h3>學雜費、住宿與輔導（第15–19條）</h3>
+        <ul class="kb">
+          <li>收費原則比照本國學生（法規另有免學費者依其規定）。</li>
+          <li>優秀/清寒獎助學金、醫療保險、工讀等由教育部與僑委會分別主辦。</li>
+        </ul>
+        <h3>其他（第20–25條）</h3>
+        <ul class="kb">
+          <li>學籍異動通報義務、就業服務法遵循、身分中止與恢復、研究所分發規定等。</li>
+        </ul>
+        <div class="links">
+          參考：
+          <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0100001" target="_blank" rel="noopener">法務部法規資料庫</a>
+          <a href="https://edu.law.moe.gov.tw/LawContent.aspx?id=FL009263#lawmenu" target="_blank" rel="noopener">教育部法規專區</a>
+        </div>
+        <div class="toolbar">
+          <button class="btn micro" data-prev="#sec0">回到上一段</button>
+          <button class="btn micro" data-top>回到頂端</button>
+          <button class="btn micro" data-toc>回到目錄</button>
+        </div>
+      </section>
+
+      <section id="sec2">
+        <h2>二、僑生資格申請與僑生考試（升大學）須知</h2>
+        <p class="meta">依海外聯合招生委員會公告彙整。</p>
+        <h3>僑生資格</h3>
+        <ul class="kb">
+          <li>海外連續居留：一般 6 年；醫牙中醫 8 年。</li>
+          <li>持僑居地長期或永久居留證明。</li>
+          <li>各年在臺停留 ≤ 120 日。</li>
+        </ul>
+        <h3>升學管道</h3>
+        <ol class="kb">
+          <li><strong>推薦入學：</strong>7–8 月公布簡章、9 月校內初審、10 月繳件。</li>
+          <li><strong>各校獨招：</strong>9–12 月依校系公告自行申請。</li>
+          <li><strong>海外聯招・個人申請：</strong>11–12 月報名、1 月上傳備審；<em>未錄取自動轉聯合分發</em>。</li>
+          <li><strong>海外聯招・聯合分發（僑考）：</strong>2 月報名，4 月測驗；放榜：6 月中上旬。</li>
+        </ol>
+        <h3>僑考科目</h3>
+        <ul class="kb">
+          <li>第一類組：國文、英文、數學、中外歷史、中外地理。</li>
+          <li>第二類組：國文、英文、數學、物理、化學。</li>
+          <li>第三類組：國文、英文、數學、生物、化學。<br>＊二、三類跨填者需加考物理或生物。</li>
+        </ul>
+        <div class="callout">
+          <strong>僑居加簽建議：</strong>可<strong>提前</strong>至駐處辦理；換新護照可移簽，避免關鍵時程受影響。
+        </div>
+        <div class="links">
+          參考：
+          <a href="https://cmn-hant.overseas.ncnu.edu.tw/" target="_blank" rel="noopener">海外聯合招生委員會</a>
+          <a href="https://admission.taiwan-world.net/" target="_blank" rel="noopener">僑生專班招生專區</a>
+        </div>
+        <div class="toolbar">
+          <button class="btn micro" data-prev="#sec1">回到上一段</button>
+          <button class="btn micro" data-top>回到頂端</button>
+          <button class="btn micro" data-toc>回到目錄</button>
+        </div>
+      </section>
+
+      <section id="sec3">
+        <h2>三、『僑生認定』與『僑居身分』Q&A</h2>
+        <ul class="kb">
+          <li><strong>僑生身分由誰認定？</strong>由僑務委員會認定；申請可透過駐外機構、保薦單位或經核准獨招之大學。</li>
+          <li><strong>護照僑居加簽效期？</strong>與護照效期同。</li>
+          <li><strong>役齡相關：</strong>接近役齡/役男需符合在臺停留天數等要件，並依規定辦理戳記註銷與加簽（詳見駐處規定）。</li>
+          <li><strong>文件語言：</strong>除英文外之外文需附中文譯本並依來源地完成驗證/認證。</li>
+          <li><strong>文件不齊如何辦？</strong>可限期補正；逾期或不能補正者，駁回。</li>
+        </ul>
+        <div class="links">
+          參考：
+          <a href="https://www.ocac.gov.tw/OCAC/FAQ/List.aspx?nodeid=384" target="_blank" rel="noopener">僑居加簽 FAQ</a>
+          <a href="https://www.ocac.gov.tw/OCAC/Pages/List.aspx?nodeid=4489" target="_blank" rel="noopener">僑生常見問答集</a>
+        </div>
+        <div class="toolbar">
+          <button class="btn micro" data-prev="#sec2">回到上一段</button>
+          <button class="btn micro" data-top>回到頂端</button>
+          <button class="btn micro" data-toc>回到目錄</button>
+        </div>
+      </section>
+
+      <section id="sec4">
+        <h2>四、駐胡志明市臺北經濟文化辦事處：護照僑居加（移）簽規定</h2>
+        <p class="meta">更新日期：<strong>2025-04-18</strong>（以駐處公告為準）。</p>
+        <h3>申請資格（摘述）</h3>
+        <ul class="kb">
+          <li>持有效我國普通護照。</li>
+          <li>越南有效永久居留權，或<strong>連續4年</strong>具一年一次以上效期居留資格且可續延。</li>
+          <li>在國外累計居住滿<strong>1460</strong>日，並具在越南連續滿6個月或最近兩年每年滿8個月之居住證明。</li>
+        </ul>
+        <h3>應備文件（摘述）</h3>
+        <ul class="kb">
+          <li>申請書（113-6版）、有效護照。</li>
+          <li>三個月內 <em>入出國日期證明書</em>（如兼持越南護照需一併提供）。</li>
+          <li>越南永久/暫居證明，近年居住證明，戶籍謄本等。</li>
+          <li>新舊護照與僑居地證明可辦理<strong>移簽</strong>。</li>
+          <li>接近役齡/役男：須檢附役期區間之入出國紀錄，遵守在臺停留天數限制。</li>
+        </ul>
+        <div class="links">
+          參考：
+          <a href="https://www.roc-taiwan.org/vnsgn/post/30240.html" target="_blank" rel="noopener">駐胡志明市辦事處公告</a>
+          <a href="https://www.roc-taiwan.org/uploads/sites/99/2020/06/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E8%AD%89%E7%85%A7%E5%8A%A0%E7%A7%BB%E7%B0%BD%E5%83%91%E5%B1%85%E8%BA%AB%E5%88%86%E7%94%B3%E8%AB%8B%E6%9B%B8113-6%E7%89%88.pdf" target="_blank" rel="noopener">申請書（113-6版）</a>
+          <a href="https://www.roc-taiwan.org/uploads/sites/99/2020/06/113.8.12-%E5%83%91%E5%B1%85%E5%8A%A0%E7%B0%BD-%E6%87%89%E5%82%99%E6%96%87%E4%BB%B6.pdf" target="_blank" rel="noopener">應備文件清單</a>
+        </div>
+        <div class="toolbar">
+          <button class="btn micro" data-prev="#sec3">回到上一段</button>
+          <button class="btn micro" data-top>回到頂端</button>
+          <button class="btn micro" data-toc>回到目錄</button>
+        </div>
+      </section>
+
+      <section id="sec5">
+        <h2>五、僑委會補充宣導資料</h2>
+        <p>更多僑生服務、宣導與最新消息，請見：</p>
+        <div class="links">
+          <a href="https://www.ocac.gov.tw/OCAC/" target="_blank" rel="noopener">中華民國僑務委員會</a>
+          <a href="https://www.ocac.gov.tw/OCAC/Pages/List.aspx?nodeid=6072" target="_blank" rel="noopener">僑生服務</a>
+        </div>
+        <div class="toolbar">
+          <button class="btn micro" data-prev="#sec4">回到上一段</button>
+          <button class="btn micro" data-top>回到頂端</button>
+          <button class="btn micro" data-toc>回到目錄</button>
+        </div>
+      </section>
+
+      <footer>
+        <p>本頁為<strong>內容整理與提要</strong>，細節仍請以主管機關最新公告／各校簡章為準。</p>
+      </footer>
+    </main>
+  </div>
+
+  <button class="btn float-top" id="toTop" aria-label="回到頂端">▲ TOP</button>
+
+  <script>
+    const toTopBtn = document.getElementById('toTop');
+    const scrollTop = () => window.scrollTo({top:0, behavior:'smooth'});
+    toTopBtn.addEventListener('click', scrollTop);
+    document.querySelectorAll('.btn[data-top]').forEach(b=>b.addEventListener('click', scrollTop));
+    document.querySelectorAll('.btn[data-toc]').forEach(b=>b.addEventListener('click', ()=>{
+      document.querySelector('nav .toc').scrollIntoView({behavior:'smooth', block:'start'});
+    }));
+    document.querySelectorAll('.btn[data-prev]').forEach(b=>b.addEventListener('click', (e)=>{
+      const sel = e.currentTarget.getAttribute('data-prev');
+      const target = document.querySelector(sel);
+      if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    }));
+    // 顯示/隱藏 TOP 浮動鍵
+    const onScroll = ()=>{ toTopBtn.style.opacity = (window.scrollY>240)?1:0; toTopBtn.style.pointerEvents = (window.scrollY>240)?'auto':'none'; };
+    window.addEventListener('scroll', onScroll); onScroll();
+  </script>
+</body>
+</html>
