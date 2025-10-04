@@ -64,7 +64,8 @@
     <!-- Main Content Grid -->
     <main class="max-w-6xl mx-auto">
 
-        <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 border-b-2 border-blue-600 pb-2">目錄與重點摘要</h2>
+        <!-- EDITED: Added text-center class to center the heading -->
+        <h2 class="text-center text-2xl md:text-3xl font-bold text-white mb-6 border-b-2 border-blue-600 pb-2">目錄與重點摘要</h2>
 
         <!-- Table of Contents / Main Sections Grid (Dark Mode) -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -251,10 +252,10 @@
                 <!-- End of Accordion for Q&A -->
             </div>
             
-            <!-- Section 5: 僑委會補充宣導資料 -->
+            <!-- Section 4: 僑委會補充宣導資料 (UPDATED NUMBER) -->
             <div class="section-card bg-gray-800 p-6 rounded-xl shadow-md border-l-4 border-cyan-400">
                 <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                    <span class="text-2xl mr-3 text-cyan-400">5</span>
+                    <span class="text-2xl mr-3 text-cyan-400">4</span>
                     僑委會補充宣導資料
                 </h3>
                 <p class="text-gray-400">
@@ -267,12 +268,16 @@
 
         </div>
 
-        <!-- Section 4: Detailed Content (Dark Mode) -->
+        <!-- Section 5: Detailed Content (Dark Mode) (UPDATED STRUCTURE) -->
         <div class="mt-10">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 border-b-2 border-blue-600 pb-2">
-                4. 駐胡志明市臺北經濟文化辦事處規定
-            </h2>
+            <!-- H2 Removed and merged into the main content div -->
             <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border-l-4 border-blue-600">
+                
+                <!-- New H2 inside the block for the main section title -->
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 border-b border-gray-700 pb-3">
+                    5. 駐胡志明市臺北經濟文化辦事處規定
+                </h2>
+                
                 <h3 class="text-xl md:text-2xl font-semibold text-blue-400 mb-4">
                     「護照加(移)簽僑居身分」規定
                     <span class="text-sm font-normal text-gray-400 ml-3">(更新日期: 2025 年 4 月 18 日)</span>
@@ -327,8 +332,8 @@
                     </div>
                 </details>
                 
-                <!-- UPDATED: Filled the 'Processing Procedure and Notes' section -->
-                <details class="mb-4 rounded-lg overflow-hidden border border-gray-700 section-card" open>
+                <!-- UPDATED: Removed 'open' attribute -->
+                <details class="mb-4 rounded-lg overflow-hidden border border-gray-700 section-card">
                     <summary class="flex items-center bg-gray-700 p-4 cursor-pointer text-lg font-medium text-white hover:bg-gray-600 transition duration-150">
                         <span class="text-blue-400">辦理流程與注意事項</span>
                     </summary>
